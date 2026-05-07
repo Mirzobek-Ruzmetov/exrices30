@@ -13,6 +13,23 @@ form.addEventListener("subit" , function (e) {
         return;
     }
 
-    console.log('input bosh emas');
+      // input.value - inputdagi qiymatni olish
+    // classlist - html elementlariga class qoshish ochirish uchun ishlatiladi 
+    // innerhtml - js ozgaruvchi ichiga html code qoshish
+    const list_item = document.createElement("div");
+    list_item.classList.add("list_item");
+    list_item.innerHTML = `
+    <div class="list_info">
+                    <input type="checkbox" type="checkbox">
+                    <p class="todo">Lorem, ipsum dolor.</p>
+                </div>
+                <button class="remove_btn">
+                    <img src="img/trash.svg" width="20" height="20" alt="trash-icon">
+                </button>
+                `;
+
+                todolist.appendChild(list_item);
+                input.value = "";
+
 
 }) ;
